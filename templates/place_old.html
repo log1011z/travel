@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{det}}</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+	<header>
+		<a href="{{url_for('index')}}" class="logo">Travel</a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+		<ul class="navbar">
+			<li><a href="{{url_for('index')}}">Home</a></li>
+			<li><a href="#package">Package</a></li>
+			<li><a href="#destination">Destination</a></li> 
+		</ul>
+	</header>
+	<section class="home" id="home" style="background: url({{ detpic }}) ; background-size: cover;">
+        <div class="home-text">
+        <h1>{{det}}</h1>
+			<p>{{ dete}}</p>
+        </div>
+	</section>
+	<section class="container">
+        <div class="text">
+			<h2>Start Your Vacation <br> with Lots of Services!</h2>
+		</div>
+		<div class="row-items01">
+            {% for item in data %}
+			<div class="container-box01">
+                <a href="{{ url_for('city',pl=item.name,flag=dete)}}" target="_blank" style="color: #000;">
+				<div class="container-img01">
+					<img src="{{item.img}}">
+				</div>
+				<h3 >{{ item.name }}</h3>
+				<p>{{item.introduction}}</p>
+                </a>
+			</div>
+            {% endfor %}
+		</div>
+	</section>
+	<section>
+		<div class="end-text">
+			<p > If you have any advice or questions,welcome to contact us by lqc1407258369@gmail.com</p>
+			<p>Looking forward to your email.</p>	
+		</div>
+	</section>
+	<script type="text/javascript" src="static/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>行游网</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">行游网</a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+		<ul class="navbar">
+			<li><a href="{{ url_for('index') }}">首页</a></li>
+			<li><a href="#package">推荐</a></li>
+			<li><a href="{{ url_for('login') }}" target="_blank">登录</a></li>
+			<li><a href="{{ url_for('register') }}" target="_blank">注册</a></li>
+			<li><a href="#destination">Destination</a></li>
+	    </ul> 
+		<div>
+		<!-- <input></input> -->
+		<div>
+	</header>
+	<section class="home" id="home">
+		<div class="home-text">
+			<h1>Fuel Mind <br> Travel</h1>
+			<p>Enthusiastically extend extensive customer service before <br> best breed convergence completely.</p>
+		</div>
+	</section>
+	<section class="container">
+		<div class="text">
+			<h2>Start Your Vacation <br> with Lots of Services!</h2>
+		</div>
+		<div class="row-items">
+			<div class="container-box">
+				<div class="container-img">
+					<img src="../static/img/img/trip1.png">
+				</div>
+				<h4>Ship Cruises</h4>
+				<p>150 Properties</p>
+			</div>
+			<div class="container-box">
+				<div class="container-img">
+					<img src="../static/img/img/trip2.png">
+				</div>
+				<h4>Food Tours</h4>
+				<p>150 Properties</p>
+			</div>
+			<div class="container-box">
+				<div class="container-img">
+					<img src="../static/img/img/trip3.png">
+				</div>
+				<h4>Summer Rest</h4>
+				<p>150 Properties</p>
+			</div>
+			<div class="container-box">
+				<div class="container-img">
+					<img src="../static/img/img/trip4.png">
+				</div>
+				<h4>Mountains Tours</h4>
+				<p>150 Properties</p>
+			</div>
+		</div>
+	</section>
+	<section class="package" id="package">
+		<div class="title">
+			<h2>Cities we recommend</h2>
+		</div>
+
+		<div class="package-content">
+			<div class="box">
+				<div class="thum">
+					<a href="{{ url_for("london") }}" target="_blank">
+					<img src="../static/img/img/img-1.jpg">
+				    </a>
+					<!-- <h3>$499</h3> -->
+				</div>
+
+				<div class="dest-content">
+					<div class="location">
+						<h4>伦敦</h4>
+						<p>4d - 5d</p>
+					</div>
+					<div class="stars">
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="thum">
+					<a href="{{ url_for("newyork") }}" target="_blank">
+					<img src="../static/img/img/img-2.jpg">
+					<!-- <h3>$499</h3> -->
+				    </a>
+				</div>
+
+				<div class="dest-content">
+					<div class="location">
+						<h4>纽约</h4>
+						<p>4d - 5d</p>
+					</div>
+					<div class="stars">
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="thum">
+					<a href="{{ url_for('sanfrancisco') }}" target="_blank">
+					<img src="../static/img/img/img-3.jpg">
+					<!-- <h3>$499</h3> -->
+				    </a>
+				</div>
+
+				<div class="dest-content">
+					<div class="location">
+						<h4>旧金山</h4>
+						<p>4d - 5d</p>
+					</div>
+					<div class="stars">
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<section class="destination" id="destination">
+		<div class="title">
+			<h2>Cities we recommend</h2>
+		</div>
+
+		<div class="destination-content">
+			<div class="col-content">
+				<img src="../static/img/img/img-1.jpg">
+				<h5>伦敦</h5>
+				<p>英国</p>
+			</div>
+
+			<div class="col-content">
+				<img src="../static/img/img/img-2.jpg">
+				<h5>纽约</h5>
+				<p>美国</p>
+			</div>
+
+			<div class="col-content">
+				<img src="../static/img/img/img-3.jpg">
+				<h5>旧金山</h5>
+				<p>美国</p>
+			</div>
+
+			<div class="col-content">
+				<img src="../static/img/img/img-4.jpg">
+				<h5>Porto Venere</h5>
+				<p>Italy</p>
+			</div>
+
+			<div class="col-content">
+				<img src="../static/img/img/img-5.jpg">
+				<h5>Queenstown</h5>
+				<p>New Zealand</p>
+			</div>
+
+			<div class="col-content">
+				<img src="../static/img/img/img-6.jpg">
+				<h5>Mátyás Templom</h5>
+				<p>Hungary</p>
+			</div>
+
+			<div class="col-content">
+				<img src="../static/img/img/img1.png">
+				<h5>The Eiffel Tower</h5>
+				<p>France</p>
+			</div>
+
+			<div class="col-content">
+				<img src="../static/img/img/img2.png">
+				<h5>Miyesa</h5>
+				<p>Norway</p>
+			</div>
+			<div class="col-content">
+				<img src="../static/img/img/img3.png">
+				<h5>Colorado</h5>
+				<p>US</p>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="end-text">
+			<p > If you have any advice or questions,welcome to contact us by lqc1407258369@gmail.com</p>
+			<p>Looking forward to your email.</p>	
+		</div>
+	</section>
+	<script type="text/javascript" src="static/js/script.js"></script>
+</body>
+
+</html>

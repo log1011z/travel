@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{det}}</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+	<header>
+		<a href="{{url_for('index')}}" class="logo">行游网</a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+		<ul class="navbar">
+			<li><a href="{{url_for('index')}}">首页</a></li>
+			<li><a href="#package">推荐</a></li>
+			<li><a href="#destination">目的地</a></li>
+			<li><a href="{{ url_for("login") }}" target="_blank">登录</a></li>
+			<li><a href="{{url_for("register")}}" target="_blank">注册</a></li>
+		</ul>
+	</div>
+	</header>
+	<section class="home" id="home" style="background: url({{detpic}}) ; background-size: cover;">
+        <div class="home-text">
+        <h1>{{det}}</h1>
+			<p>{{ dete}}</p>
+        </div>
+	</section>
+	<section class="package" id="package">	
+        <div class="text">
+			<h2>Start Your Vacation <br> with Lots of Services!</h2>	
+		</div>
+	</section>
+
+	 <!-- <div class="realtime">
+		<div class="jpg">
+		<img src="/static/img/img/img-1.jpg">
+	    </div>
+		<div class="ti">
+		<a href="" target="_blank">标题</a>
+	    </div>
+		 <a href="" target="_blank">标题</a> 
+		<div class="price">
+		<p>价格</p>
+		</div>
+	</div >  -->
+        <div class="section">
+     <h2>旅游套餐</h2>
+     </div>
+	<div class="detail">
+        {% for item in infor %}
+		<table>
+			<tr>
+				<td rowspan="2" class="img"><img src="{{item.img}}"></td>
+                <td colspan="2" class="ti"><a class="ti" href="{{ item.src }}">{{ item.name }}<br></a>
+                    <span><img class="weblogo" src="{{ item.lai }}"></span></td>
+			</tr>
+			<tr>
+				<td class="date">{{item.date}}</td>
+                 <td class="price">&yen{{item.value}}</td>
+			</tr>
+		</table>
+		{% endfor %}
+	</div>
+	<!-- <div class="realtime">
+		<img src="/static/img/img/img-1.jpg">
+		<a href="" target="_blank">标题</a>
+	    <h4>网站</h4>
+		<p>价格</p>
+	</div>
+
+	<div  class="realtime">
+		<img src="/static/img/img/img-1.jpg">
+		<a href="" target="_blank">标题afsafad</a>
+		<p>价格</p>
+	</div> -->
+
+<div class="section">
+<h2>景点信息</h2>
+ </div>
+
+	<section class="container">
+		<div class="row-items01">
+			 {% for item in data %}
+			<div class="container-box01">
+                <a href="{{ url_for('city',pl=item.name,flag=dete)}}" target="_blank" style="color: #000;">
+				<div class="container-img01">
+					<img src="{{item.img}}">
+				</div>
+				<h3 >{{ item.name }}</h3>
+				<p>{{item.introduction}}</p>
+                </a>
+			</div>
+            {% endfor %}
+
+		</div>
+	</section>
+	<section>
+		<div class="end-text">
+			<p > If you have any advice or questions,welcome to contact us by lqc1407258369@gmail.com</p>
+			<p>Looking forward to your email.</p>	
+		</div>
+	</section>
+</body>
+
+</html>	
